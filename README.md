@@ -22,7 +22,7 @@ const { Telegram } = require('puregram')
 const { SessionManager } = require('@puregram/session')
 const { RedisStorage } = require('puregram-redis-storage')
 
-const bot = new Telegram.fromToken(process.env.TOKEN)
+const bot = Telegram.fromToken(process.env.TOKEN)
 
 function startBot ({ updates }) {
     const storage = new RedisStorage({
